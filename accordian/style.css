@@ -1,0 +1,64 @@
+body {
+    background-image: url(img/question-mark-2492009_640.jpg);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.accordian {
+    width: 65%;
+    background-color: black;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+.accordian .accordian-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.accordian .container .questions {
+    padding: 2% 0%;
+    font-size: 30px;
+    cursor: pointer;
+    border-bottom: 2px solid aliceblue;
+    position: relative;
+}
+
+.accordian .container .questions::after {
+    content: '+';
+    position: absolute;
+    right: 2%;
+}
+
+.accordian .container .answer {
+    padding-top: 2%;
+    font-size: 1.5em;
+    line-height: 1.5;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.accordian .container.active .answer {
+    height: 150px;
+}
+
+.accordian .container.active .questions {
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.accordian .container.active .questions::after {
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
+}
